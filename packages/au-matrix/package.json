@@ -1,0 +1,30 @@
+{
+  "name": "au-matrix",
+  "version": "0.0.1",
+  "description": "An Aurelia plugin project.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sondr/aurelia-plugs.git"
+  },
+  "license": "MIT",
+  "author": "Sondre Tveit Ernoe",
+  "main": "dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "npm run build:ts && npm run build:other",
+    "build:other": "cpx ./src/**/*.{html,css} ./dist",
+    "build:ts": "tsc",
+    "clean": "rimraf ./dist",
+    "test": "jest",
+    "test:debug": "cross-env DEBUG=true npm run test",
+    "test:watch": "cross-env DEV=true npm run test",
+    "watch:other": "cpx ./src/**/*.{html,css} ./dist --watch",
+    "watch:ts": "tsc --watch --preserveWatchOutput"
+  },
+  "dependencies": {
+    "aurelia-bootstrapper": "^2.4.0",
+    "aurelia-framework": "^1.4.1",
+    "aurelia-testing": "^1.1.0"
+  }
+}
