@@ -8,7 +8,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { inject, bindable, bindingMode, inlineView, customElement, DOM, TemplatingEngine } from 'aurelia-framework';
-import { nameof } from '../../../shared-functions/src/nameof';
+import { nameof } from '../nameof';
 const triggerBehaviors = {
     blur: " & updateTrigger:'blur'"
 };

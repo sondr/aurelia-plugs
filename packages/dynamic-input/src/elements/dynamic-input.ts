@@ -1,5 +1,5 @@
 import { inject, bindable, bindingMode, inlineView, customElement, DOM, TemplatingEngine, View } from 'aurelia-framework';
-import { nameof } from '../../../shared-functions/src/nameof';
+import { nameof } from '../nameof';
 
 const triggerBehaviors = {
   blur: " & updateTrigger:'blur'"
