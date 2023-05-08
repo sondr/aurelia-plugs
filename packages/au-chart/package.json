@@ -1,0 +1,32 @@
+{
+  "name": "au-chartjs2",
+  "version": "0.0.1",
+  "description": "An Aurelia plugin project.",
+  "main": "dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "author": "Sondre Tveit Ernoe",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sondr/aurelia-plugs.git"
+  },
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "prebuild": "npm run clean",
+    "build:ts": "tsc",
+    "build:other": "cpx ./src/**/*.{html,css} ./dist",
+    "build": "npm run build:ts && npm run build:other",
+    "watch:ts": "tsc --watch --preserveWatchOutput",
+    "watch:other": "cpx ./src/**/*.{html,css} ./dist --watch",
+    "test:debug": "cross-env DEBUG=true npm run test",
+    "test:watch": "cross-env DEV=true npm run test",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/chart.js": "^2.9.37"
+  },
+  "dependencies": {
+    "aurelia-framework": "^1.4.1",
+    "chart.js": "^2.0.2"
+  }
+}

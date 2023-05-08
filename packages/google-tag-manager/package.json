@@ -1,0 +1,30 @@
+{
+  "name": "au-google-tag-manager",
+  "version": "0.0.1",
+  "description": "An Aurelia plugin project.",
+  "main": "dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "author": "Sondre Tveit Ernoe",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sondr/aurelia-plugs.git"
+  },
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "prebuild": "npm run clean",
+    "build:ts": "tsc",
+    "build:other": "cpx ./src/**/*.{html,css} ./dist",
+    "build": "npm run build:ts && npm run build:other",
+    "watch:ts": "tsc --watch --preserveWatchOutput",
+    "watch:other": "cpx ./src/**/*.{html,css} ./dist --watch",
+    "test:debug": "cross-env DEBUG=true npm run test",
+    "test:watch": "cross-env DEV=true npm run test",
+    "test": "jest"
+  },
+  "dependencies": {
+    "aurelia-bootstrapper": "^2.4.0",
+    "aurelia-framework": "^1.4.1",
+    "aurelia-testing": "^1.1.0"
+  }
+}
